@@ -9,6 +9,7 @@ This image is intended to be used via a selenium/hub instance, see below for a b
 The following is a base docker-compose file intended to be launched by nvidia-docker-compose https://github.com/eywalker/nvidia-docker-compose
 
 Tested with nvidia-docker-compose v0.0.5 and nvidia-docker 1.0.0
+
 ```yaml
 version: '2'
 
@@ -44,4 +45,10 @@ services:
 
 networks:
     selenium_grid_internal:
+```
+
+# Launch commands
+```bash
+xhost +local:root
+nvidia-docker-compose up -d
 ```
